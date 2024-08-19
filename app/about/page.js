@@ -10,7 +10,6 @@ const About = () => {
   const descRefs = useRef([]);
 
   useEffect(() => {
-    // Animation for the headline
     gsap.fromTo(
       headlineRef.current,
       { opacity: 0, y: 50 },
@@ -21,12 +20,11 @@ const About = () => {
         ease: 'power4.out',
         scrollTrigger: {
           trigger: headlineRef.current,
-          start: 'top 50%', // start the animation when the top of the headline is 80% from the top of the viewport
+          start: 'top 50%',
         },
       }
     );
 
-    // Staggered animation for the descriptions
     gsap.fromTo(
       descRefs.current,
       { opacity: 0, y: 50 },
@@ -38,7 +36,7 @@ const About = () => {
         stagger: 0.3,
         scrollTrigger: {
           trigger: headlineRef.current,
-          start: 'top 50%', // start the animation at the same time as the headline
+          start: 'top 50%',
         },
       }
     );
@@ -55,7 +53,7 @@ const About = () => {
         </p>
         <div className="lg:flex lg:flex-row lg:mt-6 lg:gap-10">
           <Image
-            src="/images/tryna.jpeg"
+            src="/images/sculpt.jpeg"
             width={400}
             height={400}
             alt="chrncle"
@@ -70,7 +68,7 @@ const About = () => {
             </p>
             <p
               ref={(el) => (descRefs.current[1] = el)}
-              className="lg:text-xl lg:text-end about-desc text-sm"
+              className="lg:text-xl lg:text-end about-desc text-sm mt-5 lg:mt-0"
             >
               Committed to continuous learning, I'm dedicated to expanding my knowledge and skills in programming realm to stay at the forefront of innovation. Outside of tech, I express my creativity through 3D and 2D artistry, and as a music producer.
             </p>
