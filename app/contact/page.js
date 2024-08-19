@@ -15,7 +15,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div id="contact" className="flex  lg:h-screen p-8 lg:p-8 flex-col justify-between bg-[url('/images/wavey.gif')] bg-no-repeat bg-cover">
+    <div id="contact" className="flex lg:h-screen p-8 lg:p-8 flex-col justify-between bg-[url('/images/wavey.gif')] bg-no-repeat bg-cover">
       <BottomNavbar />
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-start space-y-4 lg:space-y-0">
         <h1 className="text-white text-2xl lg:text-8xl contact-title">CONTACT</h1>
