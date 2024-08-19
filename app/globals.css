@@ -2,32 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
   }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      user-select: none;
+}
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body{
+  background-color: black;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@font-face {
+  font-family: 'NML';
+  src: url('/fonts/NeueMachina-Light.otf'), format('opentype');
+}
+
+@font-face {
+  font-family: 'NMR';
+  src: url('/fonts/NeueMachina-Regular.otf'), format('opentype');
+}
+
+@font-face {
+  font-family: 'NMUB';
+  src: url('/fonts/NeueMachina-Ultrabold.otf'), format('opentype');
+}
+
+@font-face {
+  font-family: 'PPNMB';
+  src: url('/fonts/PPNeueMontreal-Bold.otf'), format('opentype');
+}
+
+@font-face {
+  font-family: 'PPNMM';
+  src: url('/fonts/PPNeueMontreal-Medium.otf'), format('opentype');
+}
+
+@font-face {
+  font-family: 'PPNMBK';
+  src: url('/fonts/PPNeueMontreal-Book.otf'), format('opentype');
+}
+
+
+.title-hero {
+  font-family: 'NMUB';
+}
+
+.sticky-item {
+  position: sticky;
+  top: 0;
+}
+
+.about-head {
+  font-family: 'PPNMB';
+}
+
+.about-desc {
+  font-family: 'PPNMM';
+}
+
+.project-section-title {
+  font-family: 'NMUB';
+}
+
+.proj-title {
+  font-family: 'PPNMM';
+}
+
+.project-title {
+  font-family: 'PPNMB';
+}
+
+.proj-title {
+  will-change: transform, opacity; /* Hint to the browser to optimize animations */
+}
+
+.projects-section-heading {
+  font-family: 'NMUB';
+}
+
+.certificates-section-heading {
+  font-family: 'NMUB';
+}
+
+.contact-title {
+  font-family: 'PPNMB';
+}
+
+.copyrite {
+  font-family: 'NMR';
+}
+
+.nav {
+  font-family: 'NMR';
 }
