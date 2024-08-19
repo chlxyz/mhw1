@@ -128,8 +128,8 @@ const Certification = () => {
             style={{ scale: 0.8 }}
           />
           
-          <Link href={certificate.Credential} rel="noopener norefferer" target="_blank"><h1 className="text-2xl font-bold mb-2">{certificate.title}</h1></Link>
-          <p className='lg:text-xl text-sm'>{certificate.description}</p>
+          <Link href={certificate.Credential} rel="noopener norefferer" target="_blank"><h1 className="lg:text-5xl text-2xl font-bold mb-2 certi-title">{certificate.title}</h1></Link>
+          <p className='lg:text-sm text-sm certi-desc'>{certificate.description}</p>
         </div>
       ))}
     </div>
